@@ -1,4 +1,4 @@
-A library for Dart developers.
+A library(router) for Dart developers.
 ## Usage
 
 A simple usage example:
