@@ -44,4 +44,4 @@ main() {
 
 Please file feature requests and bugs at the [issue tracker][tracker].
 
-[tracker]: https://github.com/arxarinze/bethlehem.git
+[tracker]: https://github.com/arxarinze/bethlehem/issues
