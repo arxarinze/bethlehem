@@ -100,7 +100,7 @@ class WebRouter extends Router {
           }
           Function eq = const ListEquality().equals;
           if (eq(type, tmpt[0])) {
-            window.history.pushState({'url': currentUrl, 'params': []},
+            window.history.pushState({'url': currentUrl, 'params': params},
                 urlSplit[0], '#' + currentUrl);
             return route
                 .routeObject[urlSplit[0] + '/' + check[found].join('/')];
@@ -132,8 +132,8 @@ class WebRouter extends Router {
           type.forEach((e) {
             found = tmpType.indexOf(e);
           });
-          window.history.pushState(
-              {'url': currentUrl, 'params': []}, urlSplit[0], '#' + currentUrl);
+          window.history.pushState({'url': currentUrl, 'params': params},
+              urlSplit[0], '#' + currentUrl);
           return route.routeObject[urlSplit[0] + '/' + check[found].join('/')];
         }
       }
