@@ -53,7 +53,7 @@ class AngularRouter extends Router {
       if (urlSplit.length == 1) {
         window.history.pushState({'url': '#' + urlSplit[0], 'params': []},
             urlSplit[0], '#' + urlSplit[0]);
-        return route.routeObject[urlSplit[0]];
+        return route.routes[urlSplit[0]];
       } else if (urlSplit.length > 1) {
         for (var i = 1; i < urlSplit.length; i++) {
           params.add(urlSplit[i]);
@@ -103,8 +103,7 @@ class AngularRouter extends Router {
           if (eq(type, tmpt[0])) {
             window.history.pushState({'url': currentUrl, 'params': params},
                 urlSplit[0], '#' + currentUrl);
-            return route
-                .routeObject[urlSplit[0] + '/' + check[found].join('/')];
+            return route.routes[urlSplit[0] + '/' + check[found].join('/')];
           }
         } else {
           var temp = [];
@@ -135,7 +134,7 @@ class AngularRouter extends Router {
           });
           window.history.pushState({'url': currentUrl, 'params': params},
               urlSplit[0], '#' + currentUrl);
-          return route.routeObject[urlSplit[0] + '/' + check[found].join('/')];
+          return route.routes[urlSplit[0] + '/' + check[found].join('/')];
         }
       }
     }
