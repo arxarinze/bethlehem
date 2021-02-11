@@ -1,10 +1,9 @@
 import 'dart:html';
 
 import 'package:bethlehem/bethlehem.dart' as bethlehem;
-import 'package:bethlehem/src/Route/Route.dart';
 
 void main() {
-  var route = Route({
+  var route = bethlehem.Route({
     'create': HttpRequest.getString('create.html'),
     'add': HttpRequest.getString('add.html'),
     'add/:id <int>': HttpRequest.getString('test1.html'),
