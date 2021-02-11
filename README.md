@@ -49,13 +49,13 @@ import 'src/todo_list/todo_list_component.template.dart' as todo;
 
 // AngularDart info: https://angulardart.dev
 // Components info: https://angulardart.dev/components
-int _idCounter = 0;
+
 
 @Component(
   selector: 'my-app',
   styleUrls: ['app_component.css'],
   templateUrl: 'app_component.html',
-  directives: [HighlightDirective, beth.BethlehemDirective],
+  directives: [beth.BethlehemDirective],
 )
 class AppComponent implements OnInit {
   final ComponentLoader _loader;
@@ -72,7 +72,6 @@ class AppComponent implements OnInit {
         placeholder,
         _loader);
   }
-  // Nothing here yet. All logic is in TodoListComponent.
 }
 ```
 
