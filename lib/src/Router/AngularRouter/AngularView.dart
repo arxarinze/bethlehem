@@ -6,8 +6,8 @@ class AngularView implements Observer {
   dynamic viewObject;
   Subject subject;
   dynamic objectController;
-  final ComponentLoader loader;
-  AngularView(this.subject, this.viewObject, this.loader) {
+  static const ComponentLoader loader = ComponentLoader();
+  AngularView(this.subject, this.viewObject) {
     subject.register(this);
   }
   @override

@@ -58,19 +58,17 @@ import 'src/todo_list/todo_list_component.template.dart' as todo;
   directives: [beth.BethlehemDirective],
 )
 class AppComponent implements OnInit {
-  final ComponentLoader _loader;
   @ViewChild('placeholder', read: ViewContainerRef)
   ViewContainerRef placeholder;
 
-  AppComponent(this._loader);
+  AppComponent();
 
   @override
   void ngOnInit() {
     beth.AngularView(
         beth.AngularRouter(
             beth.Route({'todo': todo.TodoListComponentNgFactory})),
-        placeholder,
-        _loader);
+        placeholder);
   }
 }
 ```

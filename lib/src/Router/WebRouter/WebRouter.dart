@@ -20,7 +20,7 @@ class WebRouter extends Router {
   void detect() {
     window.addEventListener('popstate', (event) {
       if ((event as PopStateEvent).state != null) {
-        currentUrl = (event as PopStateEvent).state['url'];
+        currentUrl = (event as PopStateEvent).state['url'].replaceAll('#', '');
         observer.update(match());
       }
     });
