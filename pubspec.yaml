@@ -1,6 +1,6 @@
 name: bethlehem
 description: A router for RawDart SPA Development and AngularDart Development.
-version: 1.0.12-dev.1
+version: 1.0.14-dev.1
 homepage: https://github.com/arxarinze/bethlehem
 
 environment:

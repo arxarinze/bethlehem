@@ -12,6 +12,6 @@ class AngularView implements Observer {
   }
   @override
   void update(msg) {
-    viewObject(msg['content']);
+    viewObject(msg);
   }
 }

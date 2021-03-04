@@ -29,9 +29,6 @@ class AngularRouter extends Router {
       }
     });
     document.addEventListener('road', (e) {
-      if ((observer as AngularView).objectController != null) {
-        (observer as AngularView).objectController.destroy();
-      }
       previousUrl = window.location.toString();
       currentUrl = (e as CustomEvent).detail['url'];
       observer.update(match());

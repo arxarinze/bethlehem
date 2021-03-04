@@ -14,3 +14,6 @@
 ## 1.0.12-dev.1
 
 - Converted AngularView Placeholder into a function that returns the placeholder to allow for setup
+
+## 1.0.13-dev.1
+- Giving total control of loading the view to the object passed in by the user to the AngularView instance
