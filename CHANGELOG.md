@@ -10,3 +10,7 @@
 ## 1.0.11-dev.1
 
 - Added a better description in the pubspec file
+
+## 1.0.12-dev.1
+
+- Converted AngularView Placeholder into a function that returns the placeholder to allow for bootstraping
