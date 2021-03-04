@@ -12,6 +12,6 @@ class AngularView implements Observer {
   }
   @override
   void update(msg) {
-    objectController = loader.loadNextToLocation(msg, viewObject);
+    objectController = loader.loadNextToLocation(msg['content'], viewObject());
   }
 }

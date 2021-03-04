@@ -68,7 +68,11 @@ class AppComponent implements OnInit {
     beth.AngularView(
         beth.AngularRouter(
             beth.Route({'todo': todo.TodoListComponentNgFactory})),
-        placeholder);
+        placeholderFunc);
+  }
+
+  dynamic placeholderFunc(){
+      return placeholder
   }
 }
 ```
