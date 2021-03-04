@@ -10,5 +10,6 @@ export './src/Router/WebRouter/WebView.dart';
 export './src/Router/AngularRouter/AngularRouter.dart';
 export './src/Router/AngularRouter/AngularView.dart';
 export './src/Route/Route.dart';
+export './src/State/RouterState.dart';
 
 // TODO: Export any libraries intended for clients of this package.
