@@ -60,8 +60,9 @@ import 'src/todo_list/todo_list_component.template.dart' as todo;
 class AppComponent implements OnInit {
   @ViewChild('placeholder', read: ViewContainerRef)
   ViewContainerRef placeholder;
+  final ComponentLoader _loader;
 
-  AppComponent();
+  AppComponent(this._loader);
 
   @override
   void ngOnInit() {
@@ -71,11 +72,13 @@ class AppComponent implements OnInit {
                 'title':'Todo',
                 'content': todo.TodoListComponentNgFactory
             }})),
-        placeholderFunc);
+        ConceptionObject);
   }
 
-  dynamic placeholderFunc(){
-      return placeholder
+  dynamic ConceptionObject(msg){
+      var inception = _loader.loadNextToLocation(
+        app_drawer.AppDrawerComponentNgFactory, placeholder);
+      return inception
   }
 }
 ```
