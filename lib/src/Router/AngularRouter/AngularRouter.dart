@@ -21,14 +21,23 @@ class AngularRouter extends Router {
 
   @override
   void detect() {
+    window.addEventListener('hashchange', (event) {
+      currentUrl = (event as HashChangeEvent).newUrl.split('#')[1];
+      makeUpdate();
+    });
     window.addEventListener('popstate', (event) {
-      (observer as AngularView).objectController.destroy();
+      if ((observer as AngularView).objectController != null) {
+        (observer as AngularView).objectController.destroy();
+      }
       if ((event as PopStateEvent).state != null) {
         currentUrl = (event as PopStateEvent).state['url'].replaceAll('#', '');
         observer.update(match());
       }
     });
     document.addEventListener('road', (e) {
+      if ((observer as AngularView).objectController != null) {
+        (observer as AngularView).objectController.destroy();
+      }
       previousUrl = window.location.toString();
       currentUrl = (e as CustomEvent).detail['url'];
       observer.update(match());

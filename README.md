@@ -1,4 +1,4 @@
-A library(router) for Dart developers.
+A library(router) for Dart developers when using RawDart or AngularDart.
 ## Usage
 
 A simple usage example for Raw Dart:
@@ -67,7 +67,10 @@ class AppComponent implements OnInit {
   void ngOnInit() {
     beth.AngularView(
         beth.AngularRouter(
-            beth.Route({'todo': todo.TodoListComponentNgFactory})),
+            beth.Route({'todo':{
+                'title':'Todo',
+                'content': todo.TodoListComponentNgFactory
+            }})),
         placeholderFunc);
   }
 
